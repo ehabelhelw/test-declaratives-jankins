@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('scm check out') {
+            steps {
+                
+                echo 'from git hub'
+                echo 'check out completed'
+            }
+        }
+        
+             stage('Bulid') {
+            steps {
+                echo 'Build completed'
+            }
+        }
+             stage('test') {
+            steps {
+              echo 'test completed'
+            }
+        }
+        
+             stage('deploy') {
+            steps {
+                echo 'deploy completed'
+            }
+        }
+    }
+}
